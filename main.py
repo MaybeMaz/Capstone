@@ -28,14 +28,14 @@ def main():
                                             usernames, emails = scrapehtml(input("Enter Filename(without extension): "))
                                             check_matches(usernames, emails)
                                         case "2":
-                                            usernames, emails = webscrape(input("Enter Full URL: "))
+                                            usernames, emails = scrape_website(input("Enter Full URL: "))
+                                            print(emails)
                                             check_matches(usernames, emails)
                                         case "3":
                                             print("Goodbye!")
                                             break
                                         case _:
                                             print("Invalid choice, try again.")
-
                             case "2":
                                 print("Goodbye!")
                                 break

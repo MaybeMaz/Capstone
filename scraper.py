@@ -28,7 +28,7 @@ def scrapehtml(filename):
 
     username_pattern = r'\b[a-zA-Z0-9._-]{3,20}\b'
     usernames = set(re.findall(username_pattern, all_text_html))
-    email_pattern = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
+    email_pattern = r'[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}'
     emails = set(re.findall(email_pattern, all_text_html))
     return usernames, emails
 
